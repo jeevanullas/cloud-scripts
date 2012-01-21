@@ -1,0 +1,5 @@
+===version 0.1===
+* Collection of python scripts to manage IaaS clouds
+* Mostly utilizing libraries like boto
+* Over the period of time this will increase and become more mature
+* For any further questions or comments feel free to ping jeevanullas
