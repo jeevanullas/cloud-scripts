@@ -1,0 +1,682 @@
+setuptestname:None
+Starting setup_debugmethodNone
+[2013-02-03 04:03:26,899] [instancetest] [DEBUG]: (get_default_userhome_config:1120): Default config not found:/root/.eutester/eutester.conf
+[2013-02-03 04:03:26,902] [instancetest] [DEBUG]: (show_self:1133): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2013-02-03 04:03:26,905] [instancetest] [DEBUG]: (show_args:1154): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+-------------------------------------------------------------------------
+[2013-02-03 04:03:26,910] [instancetest] [DEBUG]: (show_self:1133): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  ['eutester.config']
+-------------------------------------------------------------------------
+[2013-02-03 04:03:26,913] [instancetest] [DEBUG]: (show_args:1154): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+args                      --->:  Namespace(config='eutester.config', config_file='eutester.config', configblocks=[], configfile='eutester.config', configsections=['MEMO', 'globals', 'instancetest'], cred_path='/root/.euca/', credpath='/root/.euca/', emi='emi-2D8A446A', ignoreblocks=[], keypair=None, password='password', tests=['BasicInstanceChecks', 'MetaData', 'Reboot'], use_color=False, vmtype='c1.medium', zone=None)
+config                    --->:  eutester.config
+config_file               --->:  eutester.config
+configblocks              --->:  []
+configfile                --->:  eutester.config
+configsections            --->:  ['MEMO', 'globals', 'instancetest']
+cred_path                 --->:  /root/.euca/
+credpath                  --->:  /root/.euca/
+emi                       --->:  emi-2D8A446A
+ignoreblocks              --->:  []
+keypair                   --->:  None
+password                  --->:  password
+tests                     --->:  ['BasicInstanceChecks', 'MetaData', 'Reboot']
+use_color                 --->:  False
+vmtype                    --->:  c1.medium
+zone                      --->:  None
+-------------------------------------------------------------------------
+[2013-02-03 04:03:26,914] [EUTESTER] [DEBUG]: Reading config file: eutester.config
+[2013-02-03 04:03:26,914] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: SSH connection has hostname:10.104.1.168 user:root password:password
+[2013-02-03 04:03:27,247] [10.105.1.153:['repo', '[nc00']] [DEBUG]: SSH connection has hostname:10.105.1.153 user:root password:password
+[2013-02-03 04:03:27,524] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: [root@10.104.1.168]# . /root/.euca//eucarc && //usr/sbin/euca-describe-services 
+[2013-02-03 04:03:27,778] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: 
+SERVICE  bootstrap      	bootstrap      	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Empyrean	arn:euca:bootstrap:::10.104.1.168/
+SERVICE	cluster        	cloud3         	cloud3-cc      	ENABLED   	19  	http://10.104.1.168:8774/axis2/services/EucalyptusCC	arn:euca:eucalyptus:cloud3:cluster:cloud3-cc/
+SERVICE	storage        	cloud3         	cloud3-sc      	ENABLED   	19  	http://10.104.1.168:8773/services/Storage	arn:euca:eucalyptus:cloud3:storage:cloud3-sc/
+SERVICE	dns            	eucalyptus     	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Dns   	arn:euca:eucalyptus::dns:10.104.1.168/
+SERVICE	walrus         	walrus         	walrus         	ENABLED   	19  	http://10.104.1.168:8773/services/Walrus	arn:euca:bootstrap:walrus:walrus:walrus/
+SERVICE	eucalyptus     	eucalyptus     	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Eucalyptus	arn:euca:eucalyptus:::10.104.1.168/
+
+[2013-02-03 04:03:27,778] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: done with exec
+[2013-02-03 04:03:27,779] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: [root@10.104.1.168]# . /root/.euca//eucarc && //usr/sbin/euca-describe-services 
+[2013-02-03 04:03:27,942] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: 
+SERVICE	bootstrap      	bootstrap      	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Empyrean	arn:euca:bootstrap:::10.104.1.168/
+SERVICE	cluster        	cloud3         	cloud3-cc      	ENABLED   	19  	http://10.104.1.168:8774/axis2/services/EucalyptusCC	arn:euca:eucalyptus:cloud3:cluster:cloud3-cc/
+SERVICE	storage        	cloud3         	cloud3-sc      	ENABLED   	19  	http://10.104.1.168:8773/services/Storage	arn:euca:eucalyptus:cloud3:storage:cloud3-sc/
+SERVICE	dns            	eucalyptus     	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Dns   	arn:euca:eucalyptus::dns:10.104.1.168/
+SERVICE	walrus         	walrus         	walrus         	ENABLED   	19  	http://10.104.1.168:8773/services/Walrus	arn:euca:bootstrap:walrus:walrus:walrus/
+SERVICE	eucalyptus     	eucalyptus     	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Eucalyptus	arn:euca:eucalyptus:::10.104.1.168/
+
+[2013-02-03 04:03:27,942] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: done with exec
+[2013-02-03 04:03:27,943] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: [root@10.104.1.168]# . /root/.euca//eucarc && //usr/sbin/euca-describe-services 
+[2013-02-03 04:03:28,118] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: 
+SERVICE	bootstrap      	bootstrap      	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Empyrean	arn:euca:bootstrap:::10.104.1.168/
+SERVICE	cluster        	cloud3         	cloud3-cc      	ENABLED   	19  	http://10.104.1.168:8774/axis2/services/EucalyptusCC	arn:euca:eucalyptus:cloud3:cluster:cloud3-cc/
+SERVICE	storage        	cloud3         	cloud3-sc      	ENABLED   	19  	http://10.104.1.168:8773/services/Storage	arn:euca:eucalyptus:cloud3:storage:cloud3-sc/
+SERVICE	dns            	eucalyptus     	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Dns   	arn:euca:eucalyptus::dns:10.104.1.168/
+SERVICE	walrus         	walrus         	walrus         	ENABLED   	19  	http://10.104.1.168:8773/services/Walrus	arn:euca:bootstrap:walrus:walrus:walrus/
+SERVICE	eucalyptus     	eucalyptus     	10.104.1.168   	ENABLED   	19  	http://10.104.1.168:8773/services/Eucalyptus	arn:euca:eucalyptus:::10.104.1.168/
+
+[2013-02-03 04:03:28,118] [10.104.1.168:['cc00', 'clc', 'sc00', 'ws']] [DEBUG]: done with exec
+[2013-02-03 04:03:28,119] [EUTESTER] [DEBUG]: Extracting keys from /root/.euca/
+[2013-02-03 04:03:28,120] [EUTESTER] [DEBUG]: Attempting to create ec2 connection to 10.104.1.168
+[2013-02-03 04:03:28,121] [EUTESTER] [DEBUG]: Attempting to create S3 connection to 10.104.1.168
+[2013-02-03 04:03:28,121] [EUTESTER] [DEBUG]: Attempting to create IAM connection to 10.104.1.168
+[2013-02-03 04:03:28,130] [EUTESTER] [DEBUG]: Attempting to create STS connection to 10.104.1.168
+[2013-02-03 04:03:28,130] [EUTESTER] [DEBUG]: Looking up group group-1359893008.13
+[2013-02-03 04:03:28,191] [EUTESTER] [DEBUG]: Creating Security Group: group-1359893008.13
+[2013-02-03 04:03:28,265] [EUTESTER] [DEBUG]: Attempting authorization of group-1359893008.13 on port 22 tcp
+[2013-02-03 04:03:28,332] [EUTESTER] [DEBUG]: Attempting authorization of group-1359893008.13 on port -1 icmp
+[2013-02-03 04:03:28,381] [EUTESTER] [DEBUG]: Looking up keypair keypair-1359893008.38
+[2013-02-03 04:03:28,418] [EUTESTER] [DEBUG]: Creating keypair: keypair-1359893008.38
+Creating testunit:BasicInstanceChecks, args:
+[2013-02-03 04:03:29,402] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:BasicInstanceChecks, with testcase.args...
+[2013-02-03 04:03:29,406] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2013-02-03 04:03:29,410] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2013-02-03 04:03:29,415] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2013-02-03 04:03:29,419] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+Creating testunit:MetaData, args:
+[2013-02-03 04:03:29,422] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:MetaData, with testcase.args...
+[2013-02-03 04:03:29,425] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2013-02-03 04:03:29,428] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2013-02-03 04:03:29,431] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2013-02-03 04:03:29,434] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+Creating testunit:Reboot, args:
+[2013-02-03 04:03:29,438] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:Reboot, with testcase.args...
+[2013-02-03 04:03:29,440] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2013-02-03 04:03:29,443] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2013-02-03 04:03:29,446] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2013-02-03 04:03:29,449] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+[2013-02-03 04:03:29,452] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:BasicInstanceChecks, TEST DESCRIPTION:
+
+        This Case Was Developed To Run Through A Series Of Basic Instance Tests.
+             The Tests Are As Follows:
+                   - Execute Run_Instances Command
+                   - Make Sure That Public Dns Name And Private Ip Aren'T The Same
+                       (This Is For Managed/Managed-Novlan Networking Modes)
+                   - Test To See If Instance Is Ping-Able
+                   - Test To Make Sure That Instance Is Accessible Via Ssh
+                       (Ssh Into Instance And Run Basic Ls Command)
+             If Any Of These Tests Fail, The Test Case Will Error Out, Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "BasicInstanceChecks(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2013-02-03 04:03:29,452] [EUTESTER] [DEBUG]: Looking for image prefix: emi-2D8A446A
+[2013-02-03 04:03:29,627] [EUTESTER] [DEBUG]: Returning image:emi-2D8A446A
+[2013-02-03 04:03:29,627] [EUTESTER] [DEBUG]: Attempting to run ebs image Image:emi-2D8A446A in group group-1359893008.13
+[2013-02-03 04:03:29,945] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-D24F3EC1
+[2013-02-03 04:03:29,945] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-9F024020 to go to running
+[2013-02-03 04:03:30,044] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:0/480
+[2013-02-03 04:03:40,161] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:10/480
+[2013-02-03 04:03:50,255] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:20/480
+[2013-02-03 04:04:00,373] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:30/480
+[2013-02-03 04:04:10,502] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:40/480
+[2013-02-03 04:04:20,613] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:50/480
+[2013-02-03 04:04:31,349] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:61/480
+[2013-02-03 04:04:41,461] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:71/480
+[2013-02-03 04:04:51,579] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:81/480
+[2013-02-03 04:05:03,129] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:93/480
+[2013-02-03 04:05:13,242] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:103/480
+[2013-02-03 04:05:23,366] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:113/480
+[2013-02-03 04:05:33,473] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:123/480
+[2013-02-03 04:05:43,564] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:133/480
+[2013-02-03 04:05:53,704] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:143/480
+[2013-02-03 04:06:03,809] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:153/480
+[2013-02-03 04:06:13,904] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:163/480
+[2013-02-03 04:06:24,034] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:173/480
+[2013-02-03 04:06:34,125] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:184/480
+[2013-02-03 04:06:44,242] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:194/480
+[2013-02-03 04:06:54,367] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:204/480
+[2013-02-03 04:07:04,471] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:214/480
+[2013-02-03 04:07:14,574] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:224/480
+[2013-02-03 04:07:24,863] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:234/480
+[2013-02-03 04:07:34,993] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(pending), elapsed:244/480
+[2013-02-03 04:07:45,133] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(running) time elapsed (255)
+[2013-02-03 04:07:45,133] [EUTESTER] [DEBUG]: Instance:i-9F024020 is now in running
+[2013-02-03 04:07:45,133] [EUTESTER] [DEBUG]: Instance i-9F024020 now in running state  in zone: cloud3
+[2013-02-03 04:07:45,134] [EUTESTER] [DEBUG]: Instance:i-9F024020 got Public IP: 10.104.3.1 Private IP: 192.168.65.217 Public DNS Name: 10.104.3.1 Private DNS Name: 192.168.65.217
+[2013-02-03 04:07:45,146] [EUTESTER] [DEBUG]: Attempting to ping 10.104.3.1
+[2013-02-03 04:07:48,163] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 19 more times
+[2013-02-03 04:07:48,163] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:07:53,171] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 18 more times
+[2013-02-03 04:07:53,171] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:07:58,179] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 17 more times
+[2013-02-03 04:07:58,179] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:03,187] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 16 more times
+[2013-02-03 04:08:03,187] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:08,195] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 15 more times
+[2013-02-03 04:08:08,195] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:13,202] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 14 more times
+[2013-02-03 04:08:13,202] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:18,211] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 13 more times
+[2013-02-03 04:08:18,211] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:23,220] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 12 more times
+[2013-02-03 04:08:23,220] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:28,228] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 11 more times
+[2013-02-03 04:08:28,229] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:33,237] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 10 more times
+[2013-02-03 04:08:33,237] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:38,249] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 9 more times
+[2013-02-03 04:08:38,249] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:43,258] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 8 more times
+[2013-02-03 04:08:43,258] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:08:48,265] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 7 more times
+[2013-02-03 04:08:48,265] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:09:00,272] [EUTESTER] [DEBUG]: Ping unsuccessful retrying in 2 seconds 6 more times
+[2013-02-03 04:09:00,272] [EUTESTER] [DEBUG]: Sleeping for 2 seconds
+[2013-02-03 04:09:02,278] [EUTESTER] [DEBUG]: Was able to ping address
+[2013-02-03 04:09:02,278] [EUTESTER] [DEBUG]: Converting Reservation:r-D24F3EC1 into euinstances
+[2013-02-03 04:09:02,343] [i-9F024020-10.104.3.1] [DEBUG]: Attempting to reconnect_to_instance:i-9F024020
+[2013-02-03 04:09:02,344] [i-9F024020-10.104.3.1] [DEBUG]: SSH connection has hostname:10.104.3.1 user:root and keypath: /root/eutester/keypair-1359893008.38.pem
+[2013-02-03 04:09:02,344] [i-9F024020-10.104.3.1] [DEBUG]: Using Keypath:/root/eutester/keypair-1359893008.38.pem
+[2013-02-03 04:09:02,988] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# 
+[2013-02-03 04:09:03,065] [i-9F024020-10.104.3.1] [DEBUG]: 
+
+[2013-02-03 04:09:03,065] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:03,065] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# dmesg | grep vda
+[2013-02-03 04:09:03,310] [i-9F024020-10.104.3.1] [DEBUG]: 
+
+[2013-02-03 04:09:03,311] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:03,311] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# dmesg | grep xvda
+[2013-02-03 04:09:03,537] [i-9F024020-10.104.3.1] [DEBUG]: 
+
+[2013-02-03 04:09:03,537] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:03,538] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-D24F3EC1
+[2013-02-03 04:09:03,538] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-9F024020 to go to running
+[2013-02-03 04:09:03,639] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(running) time elapsed (0)
+[2013-02-03 04:09:03,639] [EUTESTER] [DEBUG]: Instance:i-9F024020 is now in running
+[2013-02-03 04:09:03,639] [EUTESTER] [DEBUG]: Attempting to ping 10.104.3.1
+[2013-02-03 04:09:03,644] [EUTESTER] [DEBUG]: Was able to ping address
+[2013-02-03 04:09:03,644] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ls -1 /dev/sda2
+[2013-02-03 04:09:03,765] [i-9F024020-10.104.3.1] [DEBUG]: 
+ls: /dev/sda2: No such file or directory
+
+[2013-02-03 04:09:03,765] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[101mTraceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/eutester-0.0.5-py2.6.egg/eutester/eutestcase.py", line 264, in run
+    ret = self.method(*self.args, **self.kwargs)
+  File "./testcases/cloud_user/instances/instancetest.py", line 81, in BasicInstanceChecks
+    self.assertFalse( instance.found("ls -1 /dev/" + instance.rootfs_device + "2",  "No such file or directory"),  'Did not find ephemeral storage at ' + instance.rootfs_device + "2")
+  File "/usr/lib64/python2.6/unittest.py", line 320, in failIf
+    if expr: raise self.failureException, msg
+AssertionError: Did not find ephemeral storage at sda2
+[0m
+[2013-02-03 04:09:03,780] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - BasicInstanceChecks
+-------------------------------------------------------------------------
+
+[2013-02-03 04:09:03,783] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2013-02-03 04:09:03,783] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2013-02-03 04:09:03,783] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:09:03,783] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-02-03 04:09:03,783] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:09:03,783] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 1       | 0       | 2       | 334
+[2013-02-03 04:09:03,784] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:09:03,784] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2013-02-03 04:09:03,787] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:MetaData, TEST DESCRIPTION:
+
+        This Case Was Developed To Test The Metadata Service Of An Instance For Consistency.
+        The Following Meta-Data Attributes Are Tested:
+           - Public-Keys/0/Openssh-Key
+           - Security-Groups
+           - Instance-Id
+           - Local-Ipv4
+           - Public-Ipv4
+           - Ami-Id
+           - Ami-Launch-Index
+           - Reservation-Id
+           - Placement/Availability-Zone
+           - Kernel-Id
+           - Public-Hostname
+           - Local-Hostname
+           - Hostname
+           - Ramdisk-Id
+           - Instance-Type
+           - Any Bad Metadata That Shouldn'T Be Present.
+        Missing Nodes
+         ['Block-Device-Mapping/',  'Ami-Manifest-Path']
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "MetaData(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2013-02-03 04:09:03,787] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:03,990] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.346 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.346/0.346/0.346/0.000 ms
+
+[2013-02-03 04:09:03,990] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:03,990] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/public-keys/0/openssh-key
+[2013-02-03 04:09:04,297] [i-9F024020-10.104.3.1] [DEBUG]: 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDARiX5bXZv6VgRCON6S3LMJJFpwCz2TCFUi4KcV0F206jwKiNWIzaeM+OAHaHbwt9YqhvTcdQUFvxc1MsjB2TsXCyVc+SeyliO9/o+u942ivmy459fBk6QRf6qgVoPY6EIQ43bNuPHRAILmsGFaa/y0AxYSr0bQupLh9PDydAFlC50fPQ8dPGhvSi1WgbGaIhxdmxICDrUnBiPBcGV7iZEdtaDK8keZj6dnT+sUo2UzMtc+/MF62JgVHN4S40thHzZIJ8QppCnVilBuvtki7A27uj0FmyZpH7dpjWGLWFG9ce0k0u7Jt1cdv/CXXZdWuAlZJtUXlG68kX6HlUWkiCd 859574182126@eucalyptus.keypair-1359893008.38
+[2013-02-03 04:09:04,297] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:04,298] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:04,519] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.360 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.360/0.360/0.360/0.000 ms
+
+[2013-02-03 04:09:04,520] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:04,520] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/security-groups
+[2013-02-03 04:09:04,798] [i-9F024020-10.104.3.1] [DEBUG]: 
+group-1359893008.13
+[2013-02-03 04:09:04,798] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:04,799] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:05,021] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.388 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.388/0.388/0.388/0.000 ms
+
+[2013-02-03 04:09:05,022] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:05,022] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/instance-id
+[2013-02-03 04:09:05,285] [i-9F024020-10.104.3.1] [DEBUG]: 
+i-9F024020
+[2013-02-03 04:09:05,285] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:05,286] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:05,508] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.381 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.381/0.381/0.381/0.000 ms
+
+[2013-02-03 04:09:05,508] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:05,508] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/local-ipv4
+[2013-02-03 04:09:05,770] [i-9F024020-10.104.3.1] [DEBUG]: 
+192.168.65.217
+[2013-02-03 04:09:05,770] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:05,771] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:05,993] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.408 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.408/0.408/0.408/0.000 ms
+
+[2013-02-03 04:09:05,994] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:05,994] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/public-ipv4
+[2013-02-03 04:09:06,285] [i-9F024020-10.104.3.1] [DEBUG]: 
+10.104.3.1
+[2013-02-03 04:09:06,285] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:06,286] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:06,509] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.405 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.405/0.405/0.405/0.000 ms
+
+[2013-02-03 04:09:06,510] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:06,510] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/ami-id
+[2013-02-03 04:09:06,794] [i-9F024020-10.104.3.1] [DEBUG]: 
+emi-2D8A446A
+[2013-02-03 04:09:06,795] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:06,795] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:07,016] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.491 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.491/0.491/0.491/0.000 ms
+
+[2013-02-03 04:09:07,017] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:07,017] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/ami-launch-index
+[2013-02-03 04:09:07,289] [i-9F024020-10.104.3.1] [DEBUG]: 
+0
+[2013-02-03 04:09:07,289] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:07,289] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:07,513] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.388 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.388/0.388/0.388/0.000 ms
+
+[2013-02-03 04:09:07,513] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:07,513] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/reservation-id
+[2013-02-03 04:09:07,780] [i-9F024020-10.104.3.1] [DEBUG]: 
+r-D24F3EC1
+[2013-02-03 04:09:07,780] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:07,781] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:08,002] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.421 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.421/0.421/0.421/0.000 ms
+
+[2013-02-03 04:09:08,002] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:08,003] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/placement/availability-zone
+[2013-02-03 04:09:08,294] [i-9F024020-10.104.3.1] [DEBUG]: 
+cloud3
+[2013-02-03 04:09:08,294] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:08,294] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:08,516] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.332 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.332/0.332/0.332/0.000 ms
+
+[2013-02-03 04:09:08,516] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:08,516] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/kernel-id
+[2013-02-03 04:09:08,786] [i-9F024020-10.104.3.1] [DEBUG]: 
+eki-0F0D3B9B
+[2013-02-03 04:09:08,786] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:08,786] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:09,008] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.395 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.395/0.395/0.395/0.000 ms
+
+[2013-02-03 04:09:09,008] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:09,008] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/public-hostname
+[2013-02-03 04:09:09,281] [i-9F024020-10.104.3.1] [DEBUG]: 
+10.104.3.1
+[2013-02-03 04:09:09,281] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:09,281] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:09,505] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.453 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.453/0.453/0.453/0.000 ms
+
+[2013-02-03 04:09:09,505] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:09,506] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/local-hostname
+[2013-02-03 04:09:09,788] [i-9F024020-10.104.3.1] [DEBUG]: 
+192.168.65.217
+[2013-02-03 04:09:09,788] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:09,788] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:10,009] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.397 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.397/0.397/0.397/0.000 ms
+
+[2013-02-03 04:09:10,010] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:10,010] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/hostname
+[2013-02-03 04:09:10,288] [i-9F024020-10.104.3.1] [DEBUG]: 
+10.104.3.1
+[2013-02-03 04:09:10,288] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:10,289] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ping -c 1 169.254.169.254
+[2013-02-03 04:09:10,510] [i-9F024020-10.104.3.1] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254): 56 data bytes
+64 bytes from 169.254.169.254: icmp_seq=0 ttl=64 time=0.387 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.387/0.387/0.387/0.000 ms
+
+[2013-02-03 04:09:10,510] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:10,511] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# curl http://10.104.1.168:8773/latest/meta-data/ramdisk-id
+[2013-02-03 04:09:10,800] [i-9F024020-10.104.3.1] [DEBUG]: 
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>404 - Not Found</title>
+ </head>
+ <body>
+  <h1>404 - Not Found: failed to find meta-data/ramdisk-id</h1>
+  <pre></pre>
+ </body>
+</html>
+
+[2013-02-03 04:09:10,801] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[101mTraceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/eutester-0.0.5-py2.6.egg/eutester/eutestcase.py", line 264, in run
+    ret = self.method(*self.args, **self.kwargs)
+  File "./testcases/cloud_user/instances/instancetest.py", line 188, in MetaData
+    self.assertTrue(re.match(instance.get_metadata("ramdisk-id")[0], instance.ramdisk ), 'Incorrect ramdisk in metadata') #instance-type
+  File "/usr/lib64/python2.6/re.py", line 137, in match
+    return _compile(pattern, flags).match(string)
+TypeError: expected string or buffer
+[0m
+[2013-02-03 04:09:10,840] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - MetaData
+-------------------------------------------------------------------------
+
+[2013-02-03 04:09:10,845] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2013-02-03 04:09:10,845] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2013-02-03 04:09:10,846] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:09:10,846] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-02-03 04:09:10,846] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:09:10,846] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 2       | 0       | 1       | 341
+[2013-02-03 04:09:10,846] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:09:10,846] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2013-02-03 04:09:10,850] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:Reboot, TEST DESCRIPTION:
+
+        This Case Was Developed To Test Ip Connectivity And Volume Attachment After
+        Instance Reboot.  The Following Tests Are Done For This Test Case:
+                   - Creates A 1 Gig Ebs Volume, Then Attach Volume
+                   - Reboot Instance
+                   - Attempts To Connect To Instance Via Ssh
+                   - Checks To See If Ebs Volume Is Attached
+                   - Detaches Volume
+                   - Deletes Volume
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "Reboot(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2013-02-03 04:09:10,850] [EUTESTER] [DEBUG]: Sending create volume request, count:1
+[2013-02-03 04:09:11,051] [EUTESTER] [DEBUG]: 1/1 requests for volume creation succeeded.
+[2013-02-03 04:09:11,051] [EUTESTER] [DEBUG]: 
+
+------------------------------------------------------------------------------------------------------------------------------
+     VOL_ID    |ORDER|LASTSTATUS|TESTSTATUS|AGE@STATUS|SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|INFO_MSG
+------------------------------------------------------------------------------------------------------------------------------
+  vol-2EF33A8D |  0  | creating | creating |    0     | 1  |      None     |               None              |  32  |None
+------------------------------------------------------------------------------------------------------------------------------
+
+[2013-02-03 04:09:11,051] [EUTESTER] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2013-02-03 04:09:11,051] [EUTESTER] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2013-02-03 04:09:11,052] [EUTESTER] [DEBUG]: Polling 1 volumes for status:"available"...
+[2013-02-03 04:09:11,134] [EUTESTER] [DEBUG]: Volume #0 (vol-2EF33A8D) State(creating), seconds elapsed: 0/120
+[2013-02-03 04:09:11,134] [EUTESTER] [DEBUG]: ----Time Elapsed:0, Waiting on 1 volumes to enter state:available-----
+[2013-02-03 04:09:21,267] [EUTESTER] [DEBUG]: Volume #0 (vol-2EF33A8D) State(creating), seconds elapsed: 10/120
+[2013-02-03 04:09:21,267] [EUTESTER] [DEBUG]: ----Time Elapsed:10, Waiting on 1 volumes to enter state:available-----
+[2013-02-03 04:09:31,380] [EUTESTER] [DEBUG]: Volume #0 (vol-2EF33A8D) State(available), seconds elapsed: 20/120
+[2013-02-03 04:09:31,381] [EUTESTER] [DEBUG]: ----Time Elapsed:20, Waiting on 0 volumes to enter state:available-----
+[2013-02-03 04:09:31,381] [EUTESTER] [DEBUG]: 
+
+------------------------------------------------------------------------------------------------------------------------------
+     VOL_ID    |ORDER|LASTSTATUS|TESTSTATUS|AGE@STATUS|SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|INFO_MSG
+------------------------------------------------------------------------------------------------------------------------------
+  vol-2EF33A8D |  0  |available |available |  20.53   | 1  |      None     |               None              |  32  |None
+------------------------------------------------------------------------------------------------------------------------------
+
+[2013-02-03 04:09:31,381] [i-9F024020-10.104.3.1] [DEBUG]: Attempting to attach volume:vol-2EF33A8D to instance:i-9F024020 to dev:None
+[2013-02-03 04:09:31,381] [i-9F024020-10.104.3.1] [DEBUG]: [root@10.104.3.1]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2013-02-03 04:09:31,444] [i-9F024020-10.104.3.1] [DEBUG]: 
+
+[2013-02-03 04:09:31,444] [i-9F024020-10.104.3.1] [DEBUG]: done with exec
+[2013-02-03 04:09:32,302] [i-9F024020-10.104.3.1] [DEBUG]: Instance:i-9F024020 returning available scsi dev:/dev/sde
+[2013-02-03 04:09:32,302] [EUTESTER] [DEBUG]: Sending attach for Volume:vol-2EF33A8D to be attached to Instance:i-9F024020 at requested device  /dev/sde
+[2013-02-03 04:09:32,653] [EUTESTER] [DEBUG]: Volume:vol-2EF33A8D, state:in-use, attached status:attaching, elapsed:0/60
+[2013-02-03 04:09:32,653] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2013-02-03 04:09:42,741] [EUTESTER] [DEBUG]: Volume:vol-2EF33A8D, state:in-use, attached status:attaching, elapsed:10/60
+[2013-02-03 04:09:42,741] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2013-02-03 04:09:52,867] [EUTESTER] [DEBUG]: Volume:vol-2EF33A8D, state:in-use, attached status:attaching, elapsed:20/60
+[2013-02-03 04:09:52,867] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2013-02-03 04:10:03,018] [EUTESTER] [DEBUG]: Volume:vol-2EF33A8D, state:in-use, attached status:attaching, elapsed:30/60
+[2013-02-03 04:10:03,018] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2013-02-03 04:10:13,112] [EUTESTER] [DEBUG]: Volume:vol-2EF33A8D, state:in-use, attached status:attaching, elapsed:40/60
+[2013-02-03 04:10:13,112] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2013-02-03 04:10:23,229] [EUTESTER] [DEBUG]: Volume:vol-2EF33A8D, state:in-use, attached status:attaching, elapsed:50/60
+[2013-02-03 04:10:23,229] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2013-02-03 04:10:33,239] [i-9F024020-10.104.3.1] [DEBUG]: Failed to attach volume:vol-2EF33A8D to instance:i-9F024020
+[101mTraceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/eutester-0.0.5-py2.6.egg/eutester/eutestcase.py", line 264, in run
+    ret = self.method(*self.args, **self.kwargs)
+  File "./testcases/cloud_user/instances/instancetest.py", line 286, in Reboot
+    self.volume_device = instance.attach_volume(self.volume)
+  File "/usr/lib/python2.6/site-packages/eutester-0.0.5-py2.6.egg/eutester/euinstance.py", line 256, in attach_volume
+    return self.attach_euvolume(volume,  dev=dev, timeout=timeout, overwrite=overwrite)
+  File "/usr/lib/python2.6/site-packages/eutester-0.0.5-py2.6.egg/eutester/euinstance.py", line 306, in attach_euvolume
+    raise Exception('Failed to attach volume:'+str(euvolume.id)+' to instance:'+self.id)
+Exception: Failed to attach volume:vol-2EF33A8D to instance:i-9F024020
+[0m
+[2013-02-03 04:10:33,281] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - Reboot
+-------------------------------------------------------------------------
+
+[2013-02-03 04:10:33,285] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2013-02-03 04:10:33,286] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2013-02-03 04:10:33,286] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:10:33,286] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-02-03 04:10:33,286] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:10:33,286] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 3       | 0       | 0       | 423
+[2013-02-03 04:10:33,286] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2013-02-03 04:10:33,286] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2013-02-03 04:10:33,291] [instancetest] [DEBUG]: (run_test_case_list:697): Printing pre-cleanup results:
+[2013-02-03 04:10:33,294] [instancetest] [DEBUG]: (<lambda>:820): Test list results for testcase:instancetest
+[2013-02-03 04:10:33,297] [instancetest] [DEBUG]: (run_test_case_list:699): 
+-------------------------------------------------------------------------
+RUN TEST CASE LIST DONE:
+Ran 3/3 tests in 423 seconds
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:failed Time:334
+VALUES: BasicInstanceChecks(zone:None)
+ERROR(BasicInstanceChecks): Did not find ephemeral storage at sda2
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:7
+VALUES: MetaData(zone:None)
+ERROR(MetaData): expected string or buffer
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:failed Time:82
+VALUES: Reboot(zone:None)
+ERROR(Reboot): Failed to attach volume:vol-2EF33A8D to instance:i-9F024020
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 3       | 3       | 0       | 0       | 423     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+Creating testunit:clean_method, args:
+[2013-02-03 04:10:33,300] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:clean_method, with testcase.args...
+[2013-02-03 04:10:33,303] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2013-02-03 04:10:33,305] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self',)
+[2013-02-03 04:10:33,308] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2013-02-03 04:10:33,308] [EUTESTER] [DEBUG]: Sending terminate for Instance:i-9F024020
+[2013-02-03 04:10:33,437] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-D24F3EC1
+[2013-02-03 04:10:33,437] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-9F024020 to go to terminated
+[2013-02-03 04:10:33,639] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(shutting-down), elapsed:0/480
+[2013-02-03 04:10:43,740] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(shutting-down), elapsed:10/480
+[2013-02-03 04:10:53,850] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(shutting-down), elapsed:20/480
+[2013-02-03 04:11:03,968] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(shutting-down), elapsed:30/480
+[2013-02-03 04:11:14,056] [EUTESTER] [DEBUG]: Instance(i-9F024020) State(terminated) time elapsed (40)
+[2013-02-03 04:11:14,056] [EUTESTER] [DEBUG]: Instance:i-9F024020 is now in terminated
+[2013-02-03 04:11:14,229] [EUTESTER] [DEBUG]: Sent delete for volume: vol-2EF33A8D
+[2013-02-03 04:11:14,379] [EUTESTER] [DEBUG]: Volume:vol-2EF33A8D in deleting sleeping:10, elapsed:0
+[2013-02-03 04:11:24,510] [EUTESTER] [DEBUG]: Sending delete for group: group-1359893008.13
+[2013-02-03 04:11:24,608] [EUTESTER] [DEBUG]: Looking up group group-1359893008.13
+[2013-02-03 04:11:24,679] [EUTESTER] [DEBUG]: Sending delete for keypair: keypair-1359893008.38
+[2013-02-03 04:11:24,805] [instancetest] [DEBUG]: (<lambda>:820): Test list results for testcase:instancetest
+[2013-02-03 04:11:24,810] [instancetest] [DEBUG]: (run_test_case_list:711): 
+-------------------------------------------------------------------------
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:failed Time:334
+VALUES: BasicInstanceChecks(zone:None)
+ERROR(BasicInstanceChecks): Did not find ephemeral storage at sda2
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:7
+VALUES: MetaData(zone:None)
+ERROR(MetaData): expected string or buffer
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:failed Time:82
+VALUES: Reboot(zone:None)
+ERROR(Reboot): Failed to attach volume:vol-2EF33A8D to instance:i-9F024020
+--------------------------------------------------------------------------------
+TEST: clean_method                                 RESULT:passed Time:51
+VALUES: clean_method()
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 4       | 3       | 1       | 0       | 474     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+passed:1 out of total:4
