@@ -7,20 +7,14 @@
 
     "KeyName": {
       "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the instances",
-      "Type": "String",
+      "Type": "AWS::EC2::KeyPair::KeyName",
       "ConstraintDescription" : "must be the name of an existing EC2 KeyPair."
-    },
-
-    "EndPoint": {
-      "Description" : "Endpoint URL of Cloudformation",
-      "Type" : "String",
-      "ConstraintDescription": "must be an URL to Cloudformation service on Euca"
     },
 
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
-      "Default" : "m1.large",
+      "Default" : "m1.small",
       "AllowedValues" : [ "t1.micro", "t2.micro", "t2.small", "t2.medium", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m2.xlarge", "m2.2xlarge", "m2.4xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "c1.medium", "c1.xlarge", "c3.large", "c3.xlarge", "c3.2xlarge", "c3.4xlarge", "c3.8xlarge", "c4.large", "c4.xlarge", "c4.2xlarge", "c4.4xlarge", "c4.8xlarge", "g2.2xlarge", "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge", "r3.8xlarge", "i2.xlarge", "i2.2xlarge", "i2.4xlarge", "i2.8xlarge", "d2.xlarge", "d2.2xlarge", "d2.4xlarge", "d2.8xlarge", "hi1.4xlarge", "hs1.8xlarge", "cr1.8xlarge", "cc2.8xlarge", "cg1.4xlarge"]
 ,
       "ConstraintDescription" : "must be a valid EC2 instance type."
@@ -136,7 +130,6 @@
       "ap-southeast-1"   : {"PV64" : "ami-acd9e8fe", "HVM64" : "ami-68d8e93a", "HVMG2" : "ami-3807376a"},
       "ap-southeast-2"   : {"PV64" : "ami-ff9cecc5", "HVM64" : "ami-fd9cecc7", "HVMG2" : "ami-89790ab3"},
       "sa-east-1"        : {"PV64" : "ami-bb2890a6", "HVM64" : "ami-b52890a8", "HVMG2" : "NOT_SUPPORTED"},
-      "eucalyptus"       : {"PV64" : "emi-45019468", "HVM64" : "emi-45019468", "HVMG2" : "NOT_SUPPORTED"},
       "cn-north-1"       : {"PV64" : "ami-fa39abc3", "HVM64" : "ami-f239abcb", "HVMG2" : "NOT_SUPPORTED"}
     }
 
@@ -151,14 +144,6 @@
           {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"},
           {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : { "Ref" : "SSHLocation"}}
         ]
-      }
-    },
-
-    "InstanceProfile" : {
-      "Type" : "AWS::IAM::InstanceProfile",
-      "Properties" : {
-        "Path" : "/",
-        "Roles" : ["adminrole"]
       }
     },
 
@@ -277,35 +262,20 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "InstanceType" }, "Arch" ] } ] },
         "InstanceType"   : { "Ref" : "InstanceType" },
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
-        "IamInstanceProfile" : {"Ref" : "InstanceProfile"},
         "KeyName"        : { "Ref" : "KeyName" },
         "UserData" : { "Fn::Base64" : { "Fn::Join" : ["", [
-                       "#cloud-config","\n",
-                       "write_files:","\n",
-                       "-   path: /etc/sudoers.d/999-cloud-init-requiretty","\n",
-                       "    permissions: 440","\n",
-                       "content: |","\n",
-                       "    Defaults:centos !requiretty","\n",
-                       "runcmd:","\n",
-                       "- yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm","\n",
-                       "- yum -y install https://s3.amazonaws.com/jeevanullas-files/aws-cfn-bootstrap-1.4-8.3.el6.noarch.rpm","\n",
-                       "- yum -y install ntp python-pip wget","\n",
-                       "- /usr/sbin/ntpdate -u 0.centos.pool.ntp.org","\n",
-                       "- /etc/init.d/ntpd start","\n",
-                       "- chkconfig ntpd on","\n",
-                       "- /sbin/iptables -I INPUT 4 -m state --state NEW -p tcp --dport 80 -j ACCEPT","\n",
-                       "- /opt/aws/bin/cfn-init -v ",
+                       "#!/bin/bash -xe\n",
+                       "yum update -y aws-cfn-bootstrap\n",
+
+                       "/opt/aws/bin/cfn-init -v ",
                        "         --stack ", { "Ref" : "AWS::StackName" },
                        "         --resource WebServer ",
                        "         --configsets wordpress_install ",
-                       "         --url ", { "Ref" : "EndPoint" }, 
-                       "         --role adminrole",
                        "         --region ", { "Ref" : "AWS::Region" }, "\n",
-                       "- /opt/aws/bin/cfn-signal -e 0 ",
+
+                       "/opt/aws/bin/cfn-signal -e $? ",
                        "         --stack ", { "Ref" : "AWS::StackName" },
                        "         --resource WebServer ",
-                       "         --url ", { "Ref" : "EndPoint" },
-                       "         --role adminrole",
                        "         --region ", { "Ref" : "AWS::Region" }, "\n"
         ]]}}
       },
